@@ -7,17 +7,14 @@ namespace IntrinsicTypeTests
     public class TopOfTheType
     {
         [TestMethod]
-        [ExpectedException(typeof(Exception), AllowDerivedTypes=true)]
+        //[ExpectedException(typeof(Exception), AllowDerivedTypes=true)]
         public void TopOfInteger()
         {
             int top = int.MaxValue;
             int next = top + 1;
             //Assert.IsTrue(true);
+            //Assert.AreEqual(next, ?));
         }
-
-
-
-
 
 
 
@@ -27,13 +24,9 @@ namespace IntrinsicTypeTests
         {
             double top = double.MaxValue;
             double next = top + 1;
-            Assert.IsTrue(true);
-            Assert.IsTrue( double.IsInfinity(next));
+            //Assert.IsTrue(true);
+            //Assert.IsTrue( double.IsInfinity(next));
         }
-
-
-
-
 
 
 
@@ -44,8 +37,8 @@ namespace IntrinsicTypeTests
         {
             Single top = Single.MaxValue;
             Single next = top + 1E32F;
-            Assert.IsTrue(true);
-            Assert.IsTrue(Single.IsInfinity(next));
+            //Assert.IsTrue(true);
+            //Assert.IsTrue(Single.IsInfinity(next));
         }
 
         [TestMethod]
@@ -55,7 +48,18 @@ namespace IntrinsicTypeTests
             decimal top = decimal.MaxValue;
             decimal next = top + 1;
             //Assert.IsTrue(true);
+            //Assert.AreEqual(next, ?));
         }
+
+
+
+
+
+
+
+
+
+        
 
         [TestMethod]
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]

@@ -31,7 +31,7 @@ namespace IntrinsicTypeTests
             int niceFactor = 30;
             double discount =
                 maxDiscountPercent * (markupPercent / niceFactor);
-            Assert.IsTrue(0 == discount);
+            //Assert.IsTrue(0 == discount);
             //Assert.IsTrue(10 == discount);
             //Assert.IsTrue(20 == discount);
             //Assert.IsTrue(30 == discount);
@@ -54,7 +54,7 @@ namespace IntrinsicTypeTests
             double discount = maxDiscountPercent * (markupPercent / niceFactor);
             //Assert.IsTrue(0 == discount);
             //Assert.IsTrue(10 == discount);
-            Assert.IsTrue(20 == discount);
+            //Assert.IsTrue(20 == discount);
             //Assert.IsTrue(30 == discount);
         }
 
