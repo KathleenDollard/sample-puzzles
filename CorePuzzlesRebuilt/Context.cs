@@ -7,11 +7,11 @@ namespace CorePuzzles
     {
         private const int expirationYears = 2;
 
-        public bool Expiration()
+        public DateTime Expiration()
         {
             var now = DateTime.Now;
             var expires = CalculateExpiration(now);
-            return (expires > now);
+            return expires;
         }
 
         public DateTime CalculateExpiration(DateTime startDate)
