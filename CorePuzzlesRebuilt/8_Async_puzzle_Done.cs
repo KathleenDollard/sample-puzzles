@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AsyncPuzzles
+namespace AsyncPuzzles_Done
 {
     [TestClass]
     public class _8_Async_puzzle
@@ -18,21 +18,21 @@ namespace AsyncPuzzles
         // Toast: 1
 
         [TestMethod]
-        public  void OrderOfOperation()
+        public async Task OrderOfOperationAsync()
         {
             Coffee cup = PourCoffee();
-            Egg eggsTask = FryEggs(2);
-            Bacon baconTask = FryBacon(3);
-            Toast toastTask = makeToastWithButterAndJam(2);
+            Task<Egg> eggsTask = FryEggsAsync(2);
+            Task<Bacon> baconTask = FryBaconAsync(3);
+            Task<Toast> toastTask = makeToastWithButterAndJamAsync(2);
             Juice oj = PourOJ();
 
-            Egg eggs =  eggsTask;
-            Bacon bacon =  baconTask;
-            Toast toast =  toastTask;
+            Egg eggs = await eggsTask;
+            Bacon bacon = await baconTask;
+            Toast toast = await toastTask;
 
-             Toast makeToastWithButterAndJam(int number)
+            async Task<Toast> makeToastWithButterAndJamAsync(int number)
             {
-                Toast plainToast =  ToastBread(number);
+                Toast plainToast = await ToastBreadAsync(number);
                 ApplyButter(plainToast);
                 ApplyJam(plainToast);
                 return plainToast;
@@ -51,7 +51,7 @@ namespace AsyncPuzzles
         private static void ApplyButter(Toast toast)
             => Console.WriteLine("Putting butter on the toast");
 
-        private  static Toast ToastBread(int slices)
+        private async static Task<Toast> ToastBreadAsync(int slices)
         {
             for (int slice = 0; slice < slices; slice++)
             {
@@ -59,39 +59,39 @@ namespace AsyncPuzzles
             }
 
             Console.WriteLine("Start toasting...");
-             Task.Delay(MillisecondsDelay);
+            await Task.Delay(MillisecondsDelay);
 
             Console.WriteLine("Remove toast from toaster");
 
             return new Toast();
         }
 
-        private static  Bacon FryBacon(int slices)
+        private static async Task<Bacon> FryBaconAsync(int slices)
         {
             Console.WriteLine($"Putting {slices} of bacon in the pan");
 
             Console.WriteLine("Cooking first side of bacon...");
-             Task.Delay(MillisecondsDelay);
+            await Task.Delay(MillisecondsDelay);
 
             for (int slice = 0; slice < slices; slice++)
                 Console.WriteLine("Flipping a slice of bacon");
 
             Console.WriteLine("Cooking the second side of bacon...");
-             Task.Delay(MillisecondsDelay);
+            await Task.Delay(MillisecondsDelay);
 
             Console.WriteLine("Putting bacon on plate");
             return new Bacon();
         }
 
-        private  static Egg FryEggs(int howMany)
+        private async static Task<Egg> FryEggsAsync(int howMany)
         {
             Console.WriteLine("Warming the egg pan...");
-             Task.Delay(MillisecondsDelay);
+            await Task.Delay(MillisecondsDelay);
 
             Console.WriteLine($"Cracking {howMany} eggs");
 
             Console.WriteLine("Cooking the eggs ...");
-             Task.Delay(MillisecondsDelay);
+            await Task.Delay(MillisecondsDelay);
 
             Console.WriteLine("Putting eggs on plate");
             return new Egg();
