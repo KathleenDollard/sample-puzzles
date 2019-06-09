@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,11 +22,16 @@ namespace AsyncPuzzles
         [TestMethod]
         public void OrderOfOperation()
         {
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
             Coffee cup = PourCoffee();
             Egg eggs = FryEggs(2);
             Bacon bacon = FryBacon(3);
             Toast toast = makeToastWithButterAndJam(2);
             Juice oj = PourOJ();
+
+            watch.Stop();
+            Console.WriteLine("Elapsed: " + watch.Elapsed);
 
             Toast makeToastWithButterAndJam(int number)
             {
@@ -69,7 +75,7 @@ namespace AsyncPuzzles
             Console.WriteLine($"Putting {slices} of bacon in the pan");
 
             Console.WriteLine("Cooking first side of bacon...");
-            Task.Delay(MillisecondsDelay);
+            Thread.Sleep(MillisecondsDelay);
 
             for (int slice = 0; slice < slices; slice++)
                 Console.WriteLine("Flipping a slice of bacon");
