@@ -75,13 +75,13 @@ namespace AsyncPuzzles
             Console.WriteLine($"Putting {slices} of bacon in the pan");
 
             Console.WriteLine("Cooking first side of bacon...");
-            Thread.Sleep(MillisecondsDelay);
+            Thread.Sleep(2 * MillisecondsDelay);
 
             for (int slice = 0; slice < slices; slice++)
                 Console.WriteLine("Flipping a slice of bacon");
 
             Console.WriteLine("Cooking the second side of bacon...");
-            Thread.Sleep(4 * MillisecondsDelay);
+            Thread.Sleep(2 * MillisecondsDelay);
 
             Console.WriteLine("Putting bacon on plate");
             return new Bacon();
