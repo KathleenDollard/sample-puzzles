@@ -1,0 +1,15 @@
+﻿# Async Notes
+
+* Look at the problem, what is the fastest it could go
+
+* Run - 1.2 seconds - use var
+* Change to Task.Delay and Wait
+* Use .Result - still 1.2 seconds
+* Add await and make everything async, but directly await the tasks
+* Separately create and await the task. Watch where the OJ pouring goes. 
+
+* Why is pouring coffee different than frying an egg?
+
+* What if there was a waiter? 
+
+
