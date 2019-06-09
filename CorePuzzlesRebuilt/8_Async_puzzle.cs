@@ -11,28 +11,25 @@ namespace AsyncPuzzles
     [TestClass]
     public class _8_Async_puzzle
     {
-        private const int MillisecondsDelay = 1000;
-        // Task.Delay
-        // Bacon: 2
-        // Eggs: 2
-        // Toast: 1
+        private const int MillisecondsDelay = 100;
+        // Bacon: 4
+        // Eggs: 2 * 2
+        // Toast: 2
+        // PourCoffee: 1
+        // PourOJ: 1
 
         [TestMethod]
-        public  void OrderOfOperation()
+        public void OrderOfOperation()
         {
             Coffee cup = PourCoffee();
-            Egg eggsTask = FryEggs(2);
-            Bacon baconTask = FryBacon(3);
-            Toast toastTask = makeToastWithButterAndJam(2);
+            Egg eggs = FryEggs(2);
+            Bacon bacon = FryBacon(3);
+            Toast toast = makeToastWithButterAndJam(2);
             Juice oj = PourOJ();
 
-            Egg eggs =  eggsTask;
-            Bacon bacon =  baconTask;
-            Toast toast =  toastTask;
-
-             Toast makeToastWithButterAndJam(int number)
+            Toast makeToastWithButterAndJam(int number)
             {
-                Toast plainToast =  ToastBread(number);
+                Toast plainToast = ToastBread(number);
                 ApplyButter(plainToast);
                 ApplyJam(plainToast);
                 return plainToast;
@@ -42,6 +39,7 @@ namespace AsyncPuzzles
         private static Juice PourOJ()
         {
             Console.WriteLine("Pouring Orange Juice");
+            Thread.Sleep(MillisecondsDelay);
             return new Juice();
         }
 
@@ -51,7 +49,7 @@ namespace AsyncPuzzles
         private static void ApplyButter(Toast toast)
             => Console.WriteLine("Putting butter on the toast");
 
-        private  static Toast ToastBread(int slices)
+        private static Toast ToastBread(int slices)
         {
             for (int slice = 0; slice < slices; slice++)
             {
@@ -59,39 +57,39 @@ namespace AsyncPuzzles
             }
 
             Console.WriteLine("Start toasting...");
-             Task.Delay(MillisecondsDelay);
+            Thread.Sleep(2 * MillisecondsDelay);
 
             Console.WriteLine("Remove toast from toaster");
 
             return new Toast();
         }
 
-        private static  Bacon FryBacon(int slices)
+        private static Bacon FryBacon(int slices)
         {
             Console.WriteLine($"Putting {slices} of bacon in the pan");
 
             Console.WriteLine("Cooking first side of bacon...");
-             Task.Delay(MillisecondsDelay);
+            Task.Delay(MillisecondsDelay);
 
             for (int slice = 0; slice < slices; slice++)
                 Console.WriteLine("Flipping a slice of bacon");
 
             Console.WriteLine("Cooking the second side of bacon...");
-             Task.Delay(MillisecondsDelay);
+            Thread.Sleep(4 * MillisecondsDelay);
 
             Console.WriteLine("Putting bacon on plate");
             return new Bacon();
         }
 
-        private  static Egg FryEggs(int howMany)
+        private static Egg FryEggs(int howMany)
         {
             Console.WriteLine("Warming the egg pan...");
-             Task.Delay(MillisecondsDelay);
+            Thread.Sleep(2 * MillisecondsDelay);
 
             Console.WriteLine($"Cracking {howMany} eggs");
 
             Console.WriteLine("Cooking the eggs ...");
-             Task.Delay(MillisecondsDelay);
+            Thread.Sleep(2 * MillisecondsDelay);
 
             Console.WriteLine("Putting eggs on plate");
             return new Egg();
@@ -99,6 +97,7 @@ namespace AsyncPuzzles
         private static Coffee PourCoffee()
         {
             Console.WriteLine("Pouring coffee");
+            Thread.Sleep(MillisecondsDelay);
             return new Coffee();
         }
 
