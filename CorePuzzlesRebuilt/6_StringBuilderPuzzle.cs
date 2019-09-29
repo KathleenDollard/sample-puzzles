@@ -8,6 +8,9 @@ namespace methods_and_overloads
     [TestClass]
     public class StringBuilderPuzzle
     {
+        // I do not like this puzzle much anymore. Goal: Compare adding multiple 
+        // things in a single statement with multiple things in separate statements 
+        // and StringBuilder. Let me know if you write a better puzzle for this. 
         [TestMethod]
         public void StringBuilderRace()
         {
