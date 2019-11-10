@@ -6,8 +6,8 @@
     <ProjectGuid>{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MoreOverloads</RootNamespace>
-    <AssemblyName>MoreOverloads</AssemblyName>
+    <RootNamespace>OverloadPuzzles</RootNamespace>
+    <AssemblyName>OverloadPuzzles</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
