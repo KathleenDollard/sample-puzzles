@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePuzzlesRebuilt", "CorePuzzlesRebuilt\CorePuzzlesRebuilt.csproj", "{99D6B77E-2253-4B2E-BC5D-3411F406E043}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkString", "BenchmarkString\BenchmarkString.csproj", "{CDE58372-668E-4E33-9894-38B170C4175F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverloadPuzzles", "OverloadPuzzles\OverloadPuzzles.csproj", "{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericPuzzles", "GenericPuzzles\GenericPuzzles.csproj", "{954234D8-D783-45E7-AEFA-9B906521B75C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenchmarkDecimal", "DecimalBenchmark\BenchmarkDecimal.csproj", "{17AF98D2-4C7E-4741-8A42-325E0D8CDC67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{99D6B77E-2253-4B2E-BC5D-3411F406E043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99D6B77E-2253-4B2E-BC5D-3411F406E043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99D6B77E-2253-4B2E-BC5D-3411F406E043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDE58372-668E-4E33-9894-38B170C4175F}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE58372-668E-4E33-9894-38B170C4175F}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{CDE58372-668E-4E33-9894-38B170C4175F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDE58372-668E-4E33-9894-38B170C4175F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954234D8-D783-45E7-AEFA-9B906521B75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954234D8-D783-45E7-AEFA-9B906521B75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954234D8-D783-45E7-AEFA-9B906521B75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954234D8-D783-45E7-AEFA-9B906521B75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17AF98D2-4C7E-4741-8A42-325E0D8CDC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17AF98D2-4C7E-4741-8A42-325E0D8CDC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17AF98D2-4C7E-4741-8A42-325E0D8CDC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17AF98D2-4C7E-4741-8A42-325E0D8CDC67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

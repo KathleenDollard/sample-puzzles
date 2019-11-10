@@ -10,8 +10,8 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes=true)]
         public void TopOfInteger()
         {
-            int top = int.MaxValue;
-            int next = top + 1;
+            //int top = int.MaxValue;
+            //int next = top + 1;
             //Assert.IsTrue(true);
             //Assert.AreEqual(next, ?));
         }
@@ -22,8 +22,8 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfDouble()
         {
-            double top = double.MaxValue;
-            double next = top + 1;
+            //double top = double.MaxValue;
+            //double next = top + 1;
             //Assert.IsTrue(true);
             //Assert.IsTrue( double.IsInfinity(next));
         }
@@ -35,8 +35,8 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfSingle()
         {
-            Single top = Single.MaxValue;
-            Single next = top + 1E32F;
+            //Single top = Single.MaxValue;
+            //Single next = top + 1E32F;
             //Assert.IsTrue(true);
             //Assert.IsTrue(Single.IsInfinity(next));
         }
@@ -45,31 +45,22 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(OverflowException), AllowDerivedTypes = true)]
         public void TopOfDecimal()
         {
-            decimal top = decimal.MaxValue;
-            decimal next = top + 1;
+            //decimal top = decimal.MaxValue;
+            //decimal next = top + 1;
             //Assert.IsTrue(true);
             //Assert.AreEqual(next, ?));
         }
 
 
-
-
-
-
-
-
-
-        
-
         [TestMethod]
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfIntegerChecked()
         {
-            int top = int.MaxValue;
-            int next;
-            checked
-            { next = top + 1; }
-            next = checked(top + 1);
+            //int top = int.MaxValue;
+            //int next;
+            //checked
+            //{ next = top + 1; }
+            //next = checked(top + 1);
             //Assert.IsTrue();
         }
 
@@ -77,15 +68,14 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfIntegerCheckedCall()
         {
-            int top = int.MaxValue;
-            int next;
-            checked
-            { next = CalcNumber(top); }
+            //int top = int.MaxValue;
+            //int next;
+            //checked
+            //{ next = CalcNumber(top); }
             //Assert.IsTrue();
         }
 
-        private int CalcNumber(int input)
-        { return input + 1; }
+        private int CalcNumber(int input) => input + 1;
     }
 
 }

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{99D6B77E-2253-4B2E-BC5D-3411F406E043}</ProjectGuid>
+    <ProjectGuid>{954234D8-D783-45E7-AEFA-9B906521B75C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CorePuzzlesRebuilt</RootNamespace>
-    <AssemblyName>CorePuzzlesRebuilt</AssemblyName>
+    <RootNamespace>GenericPuzzles</RootNamespace>
+    <AssemblyName>GenericPuzzles</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -21,17 +21,16 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Release\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>Release\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,27 +46,17 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-          <Private>False</Private>
-        </Reference>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="1_DateMathPuzzle.cs" />
-    <Compile Include="2A_DivideByZero.cs" />
-    <Compile Include="2B_TopOfTheType.cs" />
-    <Compile Include="2_Division.cs" />
-    <Compile Include="3_FloatingPointPuzzle.cs" />
-    <Compile Include="4_DecimalPerformance.cs" />
-    <Compile Include="5_StaticCounters.cs" />
-    <Compile Include="6_StringBuilderPuzzle.cs" />
-    <Compile Include="7_LINQEvaluationPuzzle.cs" />
-    <Compile Include="Context.cs" />
+    <Compile Include="0_Overloads.cs" />
+    <Compile Include="1_GenericsOverloads.cs" />
+    <Compile Include="3_StaticsWithGenerics.cs" />
+    <Compile Include="GenericMethodAndClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".editorconfig" />
+    <Compile Include="2_GenericsOverloadsWithInterfaceOrBase.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
