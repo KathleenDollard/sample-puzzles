@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1CDD889D-A9E8-485B-9A6C-20A7DCC48E38}</ProjectGuid>
+    <ProjectGuid>{954234D8-D783-45E7-AEFA-9B906521B75C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OverloadPuzzles</RootNamespace>
-    <AssemblyName>OverloadPuzzles</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>GenericPuzzles</RootNamespace>
+    <AssemblyName>GenericPuzzles</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,13 +51,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="1_OverloadPuzzle.cs" />
-    <Compile Include="2_OverloadsWithInterfaceOrBase.cs" />
-    <Compile Include="3_OverloadWithBase.cs" />
-    <Compile Include="4A_OverloadsAndInheritance.cs" />
-    <Compile Include="4_OverloadsAndInheritance.cs" />
-    <Compile Include="5_NamedParameters.cs" />
+    <Compile Include="0_Overloads.cs" />
+    <Compile Include="1_GenericsOverloads.cs" />
+    <Compile Include="3_StaticsWithGenerics.cs" />
+    <Compile Include="GenericMethodAndClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="2_GenericsOverloadsWithInterfaceOrBase.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
