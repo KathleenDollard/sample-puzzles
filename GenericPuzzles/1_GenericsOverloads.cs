@@ -27,10 +27,10 @@ namespace Generics
             Int64 itemInt64 = 42;
             DateTime itemDate = new DateTime(2006, 03, 25);
 
-            //Assert.IsTrue(Test(itemInt32).StartsWith("??"));
-            //Assert.IsTrue(Test(itemInt64).StartsWith("??"));
-            //Assert.IsTrue(Test(itemDate).StartsWith ("??"));                                                    
-            //Assert.IsTrue(Test(itemInt16).StartsWith("??"));
+            Assert.IsTrue(Test(itemInt32).StartsWith("Int32"));
+            Assert.IsTrue(Test(itemInt64).StartsWith("Int64"));
+            Assert.IsTrue(Test(itemDate).StartsWith("Generic"));
+            Assert.IsTrue(Test(itemInt16).StartsWith("Generic"));
         }
 
         private string Test(Int64 item) => "Int64 version";

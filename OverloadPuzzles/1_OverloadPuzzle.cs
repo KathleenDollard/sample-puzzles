@@ -15,15 +15,15 @@ namespace methods_and_overloads
             Int64 itemInt64 = 42;
             DateTime itemDate = new DateTime(2006, 03, 25);
 
-            //Assert.IsTrue(Test(itemInt32).StartsWith("abc"));
-            //Assert.IsTrue(Test(itemInt64).StartsWith("abc"));
-            //Assert.IsTrue(Test(itemDate).StartsWith("abc"));
+            Assert.IsTrue(Test(itemInt32).StartsWith("Int32"));
+            Assert.IsTrue(Test(itemInt64).StartsWith("Int64"));
+            Assert.IsTrue(Test(itemDate).StartsWith("Object"));
 
-            //Assert.IsTrue(Test(itemInt16).StartsWith("abc"));
+            Assert.IsTrue(Test(itemInt16).StartsWith("Int32"));
         }
 
         private string Test(Int32 item) => "Int32 version";
-        private string Test(Int16 item) => "Int164 version";
+        private string Test(Int64 item) => "Int64 version";
         private string Test(object item) => "Object version";
     }
 }

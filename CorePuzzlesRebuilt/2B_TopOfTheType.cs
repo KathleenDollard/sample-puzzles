@@ -10,10 +10,9 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes=true)]
         public void TopOfInteger()
         {
-            //int top = int.MaxValue;
-            //int next = top + 1;
-            //Assert.IsTrue(true);
-            //Assert.AreEqual(next, ?));
+            int top = int.MaxValue;
+            int next = top + 1;
+            Assert.IsTrue(true);
         }
 
 
