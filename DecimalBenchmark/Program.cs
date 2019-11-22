@@ -51,13 +51,13 @@ namespace BenchmarkDecimal
         public double DoubleDivide() => doubleValue / doubleValue;
 
         [Benchmark]
-        public double SingleAdd() => doubleValue + doubleValue;
+        public Single SingleAdd() => singleValue + singleValue;
 
         [Benchmark]
-        public double SingleMultiply() => doubleValue * doubleValue;
+        public Single SingleMultiply() => singleValue * singleValue;
 
         [Benchmark]
-        public double SingleDivide() => doubleValue / doubleValue;
+        public Single SingleDivide() => singleValue / singleValue;
     }
 
     class Program
