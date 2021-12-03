@@ -56,6 +56,7 @@
     <Compile Include="4A_OverloadsAndInheritance.cs" />
     <Compile Include="4_OverloadsAndInheritance.cs" />
     <Compile Include="5_NamedParameters.cs" />
+    <Compile Include="6_ImplicitConversions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
