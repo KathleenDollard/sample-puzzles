@@ -54,7 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="1_DateMathPuzzle.cs" />
+    <Compile Include="1_DateMath.cs" />
     <Compile Include="2A_DivideByZero.cs" />
     <Compile Include="2B_TopOfTheType.cs" />
     <Compile Include="2_Division.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="5_StaticCounters.cs" />
     <Compile Include="6_StringBuilderPuzzle.cs" />
     <Compile Include="7_LINQEvaluationPuzzle.cs" />
+    <Compile Include="8_Strings.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
