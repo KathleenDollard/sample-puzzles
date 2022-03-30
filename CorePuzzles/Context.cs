@@ -16,11 +16,10 @@ namespace CorePuzzles
 
         public static DateTime CalculateExpiration(DateTime startDate)
         {
-            var expirationDate = startDate.AddYears(expirationYears);
-            //var expirationDate = new DateTime(
-            //        startDate.Year + expirationYears,
-            //        startDate.Month, 
-            //        startDate.Day);
+            var expirationDate = new DateTime(
+                    startDate.Year + expirationYears,
+                    startDate.Month,
+                    startDate.Day);
             return expirationDate;
         }
     }
