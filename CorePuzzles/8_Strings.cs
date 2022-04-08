@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -23,18 +24,44 @@ namespace CorePuzzles
         {
             var x = 3.14;
             var s = $"{x}";
-            Assert.IsTrue(s.Equals("3.14"));
+            // Assert.AreEqual(s, "3.14");
         }
+// Scroll down after test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         [TestMethod]
         //[ExpectedException (typeof(Exception), AllowDerivedTypes=true)]
         public void StringInterpolationHoles2()
         {
             var x = 3.14;
-            var s = string.Create(CultureInfo.InvariantCulture, $"{x}{F()}");
-            Assert.IsTrue(s.Equals("3.14"));
+            var s = x.ToString(CultureInfo.InvariantCulture);
+            //Assert.AreEqual(s, "3.14");
         }
 
-        public int F() => 42;
+        [TestMethod]
+        //[ExpectedException (typeof(Exception), AllowDerivedTypes=true)]
+        public void StringInterpolationHoles3()
+        {
+            var x = 1;
+            Debug.Assert(true,$"{x++}");
+            //Assert.AreEqual(x, 1);
+        }
+
     }
 }
