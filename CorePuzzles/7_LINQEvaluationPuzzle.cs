@@ -19,7 +19,7 @@ namespace collections
             //         Once for every item in the list (len)
             IEnumerable<int> qA = list.Where(x => { A++; return true; });
             foreach (int x in qA) { }
-            Assert.AreEqual(-1, A / len);
+            Assert.AreEqual(1, A / len);
         }
 
         private int B = 0;
@@ -27,7 +27,7 @@ namespace collections
         public void LINQEvaluationTestB()
         {
             IEnumerable<int> qB = list.Where(x => { B++; return true; });
-            Assert.AreEqual(-1, B / len);
+            Assert.AreEqual(0, B / len);
         }
 
 
@@ -39,7 +39,7 @@ namespace collections
             double avg = qC.Average();
             int count = qC.Count();
             foreach (int x in qC) { }
-            Assert.AreEqual(-1, C / len);
+            Assert.AreEqual(3, C / len);
         }
 
         private int D = 0;
@@ -76,7 +76,7 @@ namespace collections
         {
             IEnumerable<int> qF = list.Where(x => { F++; return true; });
             for (int i = 0; i < qF.Count(); i++) { }
-            Assert.AreEqual(-1, F / len);
+            Assert.AreEqual(11, F / len);
         }
     }
 }

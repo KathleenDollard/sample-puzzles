@@ -12,9 +12,13 @@ namespace IntrinsicTypeTests
         {
             int top = int.MaxValue;
             int next = top + 1;
-            //Assert.IsTrue(true);
+            Assert.IsTrue(true);
             //Assert.AreEqual(next, ?));
         }
+
+
+
+
 
 
 
@@ -22,9 +26,10 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfDouble()
         {
-            //double top = double.MaxValue;
-            //double next = top + 1;
-            //Assert.IsTrue(true);
+            double top = double.MaxValue;
+            double next = top + 1;
+            Assert.IsTrue(true);
+            Assert.AreEqual(top, next);
             //Assert.IsTrue( double.IsInfinity(next));
         }
 
@@ -35,10 +40,10 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(Exception), AllowDerivedTypes = true)]
         public void TopOfSingle()
         {
-            //Single top = Single.MaxValue;
-            //Single next = top + 1E32F;
-            //Assert.IsTrue(true);
-            //Assert.IsTrue(Single.IsInfinity(next));
+            Single top = Single.MaxValue;
+            Single next = top + 1E32F; // very big number
+            Assert.IsTrue(true);
+            Assert.IsTrue(Single.IsInfinity(next));
         }
 
         [TestMethod]

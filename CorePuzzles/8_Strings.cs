@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Globalization;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -24,7 +22,7 @@ namespace CorePuzzles
         {
             var x = 3.14;
             var s = $"{x}";
-            // Assert.AreEqual(s, "3.14");
+            Assert.AreEqual(s, "3.14");
         }
 // Scroll down after test
 
@@ -51,7 +49,7 @@ namespace CorePuzzles
         {
             var x = 3.14;
             var s = x.ToString(CultureInfo.InvariantCulture);
-            //Assert.AreEqual(s, "3.14");
+            Assert.AreEqual(s, "3.14");
         }
 
         [TestMethod]
@@ -60,7 +58,7 @@ namespace CorePuzzles
         {
             var x = 1;
             Debug.Assert(true,$"{x++}");
-            //Assert.AreEqual(x, 1);
+            Assert.AreEqual(x, 2);
         }
 
     }
