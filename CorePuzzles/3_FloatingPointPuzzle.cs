@@ -41,7 +41,7 @@ namespace IntrinsicTypeTests
             var result = 3 * (double)x;
             //Assert.IsTrue(result == 1.0);
             //Assert.IsTrue(result > 1.0);
-            Assert.IsTrue(result < 1.0);
+            //Assert.IsTrue(result < 1.0);
         }
 
 
@@ -89,7 +89,7 @@ namespace IntrinsicTypeTests
             double result2 = x + x + x + x + x + x + x + x + x + x;
             //Assert.IsTrue(result == 1);
             //Assert.IsTrue(result2 == 1);
-            Assert.IsFalse(result == result2);
+            //Assert.IsFalse(result == result2);
         }
 
         [TestMethod]

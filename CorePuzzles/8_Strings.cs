@@ -23,7 +23,8 @@ namespace CorePuzzles
         {
             var x = 3.14;
             var s = $"{x}";
-            Assert.IsTrue(s.Equals("3.14"));
+            //Assert.IsTrue(s.Equals("3.14"));
+            //Assert.IsFalse(s.Equals("3.14"));
         }
 
         [TestMethod]
@@ -32,7 +33,8 @@ namespace CorePuzzles
         {
             var x = 3.14;
             var s = string.Create(CultureInfo.InvariantCulture, $"{x}{F()}");
-            Assert.IsTrue(s.Equals("3.14"));
+            //Assert.IsTrue(s.Equals("3.14"));
+            //Assert.IsFalse(s.Equals("3.14"));
         }
 
         public int F() => 42;
