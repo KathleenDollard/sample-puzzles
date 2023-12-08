@@ -7,7 +7,7 @@ namespace IntrinsicTypeTests
     public class FloatingPoint
     {
 
-
+        #region How you might encounter this
         /// <summary>
         /// Provide context for floating point puzzles
         /// </summary>
@@ -25,9 +25,7 @@ namespace IntrinsicTypeTests
             else
             { }  // Exactly on target! Give everyone a bonus }
         }
-
-
-
+        #endregion
 
 
 

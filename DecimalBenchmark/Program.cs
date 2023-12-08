@@ -54,7 +54,16 @@ namespace BenchmarkDecimal
         public Single SingleAdd() => singleValue + singleValue;
 
         [Benchmark]
-        public Single SingleMultiply() => singleValue * singleValue;
+        public Single SingleMultiply() => 
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue *
+            singleValue * singleValue;
 
         [Benchmark]
         public Single SingleDivide() => singleValue / singleValue;

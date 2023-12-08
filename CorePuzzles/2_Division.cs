@@ -6,21 +6,19 @@ namespace IntrinsicTypeTests
     [TestClass]
     public class Division
     {
-
+        #region How you might use this in code
         public void test()
         {
-            var discount = CalucateDiscount(30, 20, 30);
+            var discount = CalculateDiscount(30, 20, 30);
         }
 
-
-        public int CalucateDiscount(int maxDiscountPercent, 
+        public int CalculateDiscount(int maxDiscountPercent, 
             int markupPercent, int niceFactor)
         {
             int discount = maxDiscountPercent * (markupPercent / niceFactor);
             return discount;
         }
-
-
+        #endregion
 
         [TestMethod]
         //[ExpectedException (typeof(Exception), AllowDerivedTypes=true)]

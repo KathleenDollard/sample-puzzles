@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace IntrinsicTypeTests
 {
@@ -13,7 +12,7 @@ namespace IntrinsicTypeTests
             //int three = 3;
             //int zero = 0;
             //int result = three / zero;
-            //Assert.IsTrue(true);
+            //Assert.IsTrue(true); // Will this code be reached?
         }
 
 

@@ -83,7 +83,7 @@ namespace IntrinsicTypeTests
                 Value = 3,
                 Greeting = "Hello"
             };
-            FStruct(g);
+            FRecordStruct(g);
             //Assert.AreEqual((3, "Hello"), (g.Value, g.Greeting));
             //Assert.AreEqual((4,"Hello"),  (g.Value,g.Greeting));
             //Assert.AreEqual((3,"Goodbye"),(g.Value,g.Greeting));
@@ -105,6 +105,12 @@ namespace IntrinsicTypeTests
         }
 
         private void FStruct(GreetingStruct greeting)
+        {
+            greeting.Value += 1;
+            greeting.Greeting = "Goodbye";
+        }
+
+        private void FRecordStruct(GreetingRecordStruct greeting)
         {
             greeting.Value += 1;
             greeting.Greeting = "Goodbye";
