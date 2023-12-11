@@ -14,7 +14,7 @@ namespace IntrinsicTypeTests
             int value = 3;
             string greeting = "Hello";
             F(value, greeting);
-            //Assert.AreEqual((3, "Hello"), (value, greeting));
+            Assert.AreEqual((3,"Hello"), (value, greeting));
             //Assert.AreEqual((4,"Hello"),(value,greeting));
             //Assert.AreEqual((3,"Goodbye"),(value,greeting));
             //Assert.AreEqual((4,"Goodbye"),(value,greeting));
@@ -34,8 +34,8 @@ namespace IntrinsicTypeTests
             FClass(g);
             //Assert.AreEqual((3,"Hello"),  (g.Value,g.Greeting));
             //Assert.AreEqual((4,"Hello"),  (g.Value,g.Greeting));
-            //Assert.AreEqual((3,"Goodbye"),(g.Value,g.Greeting));
-            //Assert.AreEqual((4, "Goodbye"), (g.Value, g.Greeting));
+            //Assert.AreEqual((3,"Goodbye"), (g.Value,g.Greeting));
+            Assert.AreEqual((4,"Goodbye"), (g.Value, g.Greeting));
         }
 
 
@@ -50,10 +50,10 @@ namespace IntrinsicTypeTests
                 Greeting = "Hello"
             };
             FStruct(g);
-            //Assert.AreEqual((3, "Hello"), (g.Value, g.Greeting));
+            Assert.AreEqual((3, "Hello"), (g.Value, g.Greeting));
             //Assert.AreEqual((4,"Hello"),  (g.Value,g.Greeting));
-            //Assert.AreEqual((3,"Goodbye"),(g.Value,g.Greeting));
-            //Assert.AreEqual((4, "Goodbye"), (g.Value, g.Greeting));
+            //Assert.AreEqual((3,"Goodbye"), (g.Value,g.Greeting));
+            //Assert.AreEqual((4,"Goodbye"), (g.Value, g.Greeting));
         }
 
         [TestMethod]

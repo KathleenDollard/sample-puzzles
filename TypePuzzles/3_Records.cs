@@ -1,3 +1,6 @@
+using System.Runtime.CompilerServices;
+using System.Text;
+
 namespace IntrinsicTypeTests;
 
 // This puzzle is a bit different. Copy this code into 

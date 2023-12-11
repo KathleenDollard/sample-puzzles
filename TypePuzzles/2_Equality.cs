@@ -16,7 +16,7 @@ namespace IntrinsicTypeTests
             int value2 = 3;
             string greeting2 = "Hello";
 
-            //Assert.IsTrue((value, greeting) == (value2, greeting2));
+            Assert.IsTrue((value, greeting) == (value2, greeting2));
             //Assert.IsFalse((value, greeting) == (value2, greeting2));
         }
 
@@ -38,7 +38,7 @@ namespace IntrinsicTypeTests
             };
 
             //Assert.IsTrue(g == g2);
-            //Assert.IsFalse(g == g2);
+            Assert.IsFalse(g == g2);
         }
 
 
@@ -53,7 +53,7 @@ namespace IntrinsicTypeTests
             };
             var g3 = g;
 
-            //Assert.IsTrue(g == g3);
+            Assert.IsTrue(g == g3);
             //Assert.IsFalse(g == g3);
         }
 
@@ -74,7 +74,7 @@ namespace IntrinsicTypeTests
             };
 
             // struct does not have a equality operator by default
-            //Assert.IsTrue(g.Equals(g2));
+            Assert.IsTrue(g.Equals(g2));
             //Assert.IsFalse(g.Equals(g2));
         }
 
@@ -88,9 +88,10 @@ namespace IntrinsicTypeTests
                 Greeting = "Hello"
             };
             var g3 = g;
+            g3.Greeting = "Goodbye";
 
             // struct does not have a equality operator by default
-            //Assert.IsTrue(g.Equals(g3));
+            Assert.IsTrue(g.Equals(g3));
             //Assert.IsFalse(g.Equals(g3));
         }
 

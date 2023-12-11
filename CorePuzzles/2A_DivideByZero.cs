@@ -6,12 +6,12 @@ namespace IntrinsicTypeTests
     public class DivideByZero
     {
         [TestMethod]
-        //[ExpectedException(typeof(DivideByZeroException))]
+        [ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroInteger()
         {
-            //int three = 3;
-            //int zero = 0;
-            //int result = three / zero;
+            int three = 3;
+            int zero = 0;
+            int result = three / zero;
             //Assert.IsTrue(true); // Will this code be reached?
         }
 
@@ -32,10 +32,10 @@ namespace IntrinsicTypeTests
         //[ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroDouble()
         {
-            //double three = 3;
-            //double zero = 0;
-            //double result = three / zero;
-            //Assert.IsTrue(true);
+            double three = 3;
+            double zero = 0;
+            double result = three / zero;
+            Assert.IsTrue(true);
         }
     }
 }

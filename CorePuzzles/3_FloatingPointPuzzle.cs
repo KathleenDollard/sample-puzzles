@@ -36,9 +36,9 @@ namespace IntrinsicTypeTests
             float one = 1;
             Single three = 3;
             Single x = one / three;
-            var result = 3 * (double)x;
+            var result = 3 * x;
             //Assert.IsTrue(result == 1.0);
-            //Assert.IsTrue(result > 1.0);
+            Assert.IsTrue(result > 1.0);
             //Assert.IsTrue(result < 1.0);
         }
 

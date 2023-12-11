@@ -75,6 +75,7 @@ namespace BenchmarkDecimal
         {
             var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
             Console.WriteLine(summary);
+            Console.Read();
         }
     }
 }
